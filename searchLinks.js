@@ -1,12 +1,10 @@
 const searchLinks = (data) => {
-    const caracter = ")";
-    const linksEnd = /https/g;
-    //const expReg = new RegExp(linksEnd);
-    const links = data.match(linksEnd,caracter);
-
+    const links = data.match(/(((https?:\/\/)|(www\.))[^\s]+)/g);
         return links;   
 }
 
 module.exports ={
     searchLinks
 }
+
+///(https?:\/\/[^\s]+)/g
