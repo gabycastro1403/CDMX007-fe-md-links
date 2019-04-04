@@ -4,10 +4,10 @@
   "description": "## Preámbulo",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test":  "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bin": {
     "search-links": "./cli.js"
   },
-  "homepage": "https://github.com/gabycastro1403/CDMX007-fe-md-links#readme"
+  "homepage": "https://github.com/gabycastro1403/CDMX007-fe-md-links#readme",
+  "devDependencies": {
+    "jest": "^24.7.0"
+  }
 }
