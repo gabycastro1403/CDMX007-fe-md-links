@@ -11,18 +11,18 @@ const httpGet = require('./httpGet');
 //   //console.log(linksMd);
 //   const validateLink = httpGet.getHttp(linksMd);
 //   console.log(validateLink);
-  
 // });
 
 //Funcion de ruta de directorio y obtiene el contenido y los links del mismo   
 findDir.readdir('./',(list)=>{
   const result =  parser.searchMd(list)
+  //console.log(list);
   result.forEach(element => {
   fileManager.readFile(element, (data) => {
       const linksMd = searchLinks.searchLinks(data);
       //console.log(linksMd);
-      const validateLink = httpGet.getHttp(linksMd);
+      const validateLink= httpGet.getHttp(linksMd)
       console.log(validateLink);
-    })
+  })
  }); 
 });

@@ -1,23 +1,21 @@
+const colors = require('colors');
 const getHttp= (linksArray) => {
-    //console.log(linksArray);
     linksArray.forEach(element => {
         if (element.match(/(https:\/\/[^\s]+)/g)){
             const https = require('https');
             https.get(element, (res) => {
-            console.log(element,'statusCode:', res.statusCode);
-            }).on('error', (e) => {
-            console.error(e);
+            console.log(`link:${colors.blue(element)} ${colors.green(res.statusCode)} Ok`);
+            }).on('error', (res) => {
+            console.error(`link:${colors.yellow(element)} ${colors.red(res.port)} Fail`);
             });
-            
-    }else if(element.match(/(http:\/\/[^\s]+)/g)) {
-        const http = require('http');
-        http.get(element, (res) => {
-        console.log(element,'statusCode:',res.statusCode);
-        }).on('error', (e) => {
-        console.error(e);
-        });
-
-    } 
+            }else{
+                const http = require('http');
+                http.get(element, (res) => {
+                console.log(`link:${colors.blue(element)} ${colors.green(res.statusCode)}Ok`);
+                }).on('error', (res) => {
+                console.error(`link:${colors.yellow(element)} ${colors.red(res.port)}Fail`);
+            });
+        }
     })
 }
 
