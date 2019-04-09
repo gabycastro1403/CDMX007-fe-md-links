@@ -6,4 +6,4 @@ const searchLinks = (data) => {
 module.exports ={
     searchLinks
 }
-
+///\[(.+)\]\(([^ ]+?)( “(.+)“)?\)/gm
