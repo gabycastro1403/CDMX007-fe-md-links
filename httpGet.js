@@ -38,13 +38,12 @@ const promise =  new Promise((resolve, reject) =>{
             });
         }
      })
-   
     })
-    const result = await promise
-     console.log(result)
-    return result
+    // const result =  promise
+    //console.log(result)
+    return promise
  }
-
+ 
 module.exports = {
     getHttp
 }
