@@ -1,3 +1,7 @@
 #!/usr/bin/env node
-console.log("Hello");
-console.log(process.argv)
+const http = require('./httpGet');
+// console.log("Hello");
+// console.log(process.argv)
+
+
+
