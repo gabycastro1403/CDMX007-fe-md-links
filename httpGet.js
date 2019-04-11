@@ -1,5 +1,5 @@
 //función que valida los links 
-const colors = require('colors');
+
 const getHttp=  async (linksArray) => {
 const promise =  new Promise((resolve, reject) =>{
     const validateLinks = [];
@@ -39,8 +39,7 @@ const promise =  new Promise((resolve, reject) =>{
         }
      })
     })
-    // const result =  promise
-    //console.log(result)
+    
     return promise
  }
  
