@@ -1,12 +1,12 @@
 
-
+const colors = require('colors');
 const links =  (arrayValidate,path) => {
     console.log(arrayValidate);
     arrayValidate.forEach(element => {
         if (element.status >=400){
-            console.log(`${path} ${element.link} ${element.status} Fail`)
+            console.log(`${colors.blue(path)} ${colors.red(element.link)} ${colors.yellow(element.status)} Fail`)
         }else{
-            console.log(`${path} ${element.link} ${element.status} OK`)
+            console.log(`${colors.blue(path)} ${colors.cyan(element.link)} ${colors.green(element.status)} OK`)
         }
         
     });

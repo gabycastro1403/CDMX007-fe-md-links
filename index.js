@@ -6,6 +6,7 @@ const findDir = require('./readDir');
 const searchLinks = require('./searchLinks');
 const httpGet = require('./httpGet');
 const validate = require('./validate')
+const stats = require('./stats');
 const colors = require('colors');
 const path = require('path');
 const fs = require('fs');
@@ -18,6 +19,18 @@ if (process.argv[3] == '--validate'){
     .then(resp => {
       console.log(validate.links(resp,pathInput))})
   });
+}else if(process.argv[3] == '--stats'){
+  console.log('Si estoy en stats');
+  fileManager.readFile(pathInput, (data)=>{
+    const linksMd = searchLinks.searchLinks(data)
+    httpGet.getHttp(linksMd)
+    .then(resp => {
+      const statsLinks = stats.stats(resp,pathInput)
+      console.log(statsLinks)})
+      .catch(error => console.log(error))
+      
+  })
+  
 }else if(path.extname(pathInput) === ".md"){
 fileManager.readFile(pathInput, (data)=>{
   //console.log(data);
