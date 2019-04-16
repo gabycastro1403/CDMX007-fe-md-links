@@ -1,9 +1,10 @@
 # Markdown Links
 
-## Control de flujo
-
 ## Descripción
+
 MD-LINKS es una librería que te ayuda a encontrar los links dentro de un archivo Markdown. una vez que los encuentra puedes dar la opción de validar o sacar la estadística de cuantos links tienes en total, cuantos linsk son únicos y cuantos de ellos estan rotos.
+
+## Control de flujo
 
 ![Control de flujo](coverage/images/Control.png)
 
@@ -16,7 +17,6 @@ MD-LINKS es una librería que te ayuda a encontrar los links dentro de un archiv
 - HTTPS Get (módulo de Node.js)
 - File System (módulo de Node.js)
 - Línea  de comando CLI
-
 
 
 ## Guia de uso e instalación
@@ -35,6 +35,7 @@ Cuando quieres validar los links de tu archivo, solo tienes que dar el siguente 
 
 ### Autores
 - Gabriela Jazmín Castro Guzmán
+
 ### Agradecimientos 
 Al equipo de laboratoria que hacen posiblr mi educación y a mis compañeras que me apoyaron en todo momento.
 
