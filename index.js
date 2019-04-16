@@ -7,7 +7,6 @@ const searchLinks = require('./searchLinks');
 const httpGet = require('./httpGet');
 const validate = require('./validate')
 const stats = require('./stats');
-const colors = require('colors');
 const path = require('path');
 const fs = require('fs');
 const pathInput = process.argv[2];
@@ -20,7 +19,6 @@ if (process.argv[3] == '--validate'){
       console.log(validate.links(resp,pathInput))})
   });
 }else if(process.argv[3] == '--stats'){
-  console.log('Si estoy en stats');
   fileManager.readFile(pathInput, (data)=>{
     const linksMd = searchLinks.searchLinks(data)
     httpGet.getHttp(linksMd)
@@ -33,7 +31,6 @@ if (process.argv[3] == '--validate'){
   
 }else if(path.extname(pathInput) === ".md"){
 fileManager.readFile(pathInput, (data)=>{
-  //console.log(data);
   const linksMd = searchLinks.searchLinks(data)
   console.log(linksMd);
   console.log(process.argv);
@@ -42,9 +39,7 @@ fileManager.readFile(pathInput, (data)=>{
 
 //Funcion de ruta de directorio y obtiene el contenido y los links del mismo   
 findDir.readdir(pathInput,(list)=>{
-  
   const result =  parser.searchMd(list)
-  //console.log(list);
   result.forEach(element => {
   fileManager.readFile(element, (data) => {
     const linksMd = searchLinks.searchLinks(data)

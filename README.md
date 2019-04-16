@@ -1,5 +1,45 @@
 # Markdown Links
 
+## Control de flujo
+
+## Descripción
+MD-LINKS es una librería que te ayuda a encontrar los links dentro de un archivo Markdown. una vez que los encuentra puedes dar la opción de validar o sacar la estadística de cuantos links tienes en total, cuantos linsk son únicos y cuantos de ellos estan rotos.
+
+![Control de flujo](coverage/images/Control.png)
+
+## Herramientas de construcción
+- JavaScript vanilla (ES6)
+- Node.js
+- Jest (Testing)
+- Regex
+- HTTP Get (módulo de Node.js)
+- HTTPS Get (módulo de Node.js)
+- File System (módulo de Node.js)
+- Línea  de comando CLI
+
+
+
+## Guia de uso e instalación
+Para instalar la librería necesitas ejecutar el siguiente comando `npm install <github-user>/md-links` . Para poder correr la librería necesitas instalar Node.js globalmente.
+
+#### MD-LINKS
+Cuando ingresas el siguiente comando en la terminal `md-links <Ruta de tu archivo>` la libreria extraerá los links dentro de tu archivo y mostrará el siguiente resultado:
+
+![links](coverage/images/links.png)
+
+#### Opción -- Validate
+Cuando quieres validar los links de tu archivo, solo tienes que dar el siguente comando en la terminal `md-links <ruta de tu archivo> --validate` y aparecerá un mensaje como el siguiente:
+
+![validate](coverage/images/validate.png)
+
+
+### Autores
+- Gabriela Jazmín Castro Guzmán
+### Agradecimientos 
+Al equipo de laboratoria que hacen posiblr mi educación y a mis compañeras que me apoyaron en todo momento.
+
+
+
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
