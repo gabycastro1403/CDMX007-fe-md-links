@@ -6,7 +6,7 @@ MD-LINKS es una librería que te ayuda a encontrar los links dentro de un archiv
 
 ## Control de flujo
 
-![Control de flujo](coverage/images/Control.png)
+![Control de flujo](images/Control.png)
 
 ## Herramientas de construcción
 - JavaScript vanilla (ES6)
@@ -25,12 +25,12 @@ Para instalar la librería necesitas ejecutar el siguiente comando `npm install 
 #### MD-LINKS
 Cuando ingresas el siguiente comando en la terminal `md-links <Ruta de tu archivo>` la libreria extraerá los links dentro de tu archivo y mostrará el siguiente resultado:
 
-![links](coverage/images/links.png)
+![links](images/links.png)
 
 #### Opción -- Validate
 Cuando quieres validar los links de tu archivo, solo tienes que dar el siguente comando en la terminal `md-links <ruta de tu archivo> --validate` y aparecerá un mensaje como el siguiente:
 
-![validate](coverage/images/validate.png)
+![validate](images/validate.png)
 
 
 ### Autores
